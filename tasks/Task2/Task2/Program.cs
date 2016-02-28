@@ -19,6 +19,29 @@ namespace Task2
             w2.Name = "Five-Seven";
             Console.WriteLine($"Weapon 2 Name: {w2.Name}");
             Console.WriteLine($"Clipsize in Weapon 2 upated to {w2.UpdateClipsize(30)}");
+            Console.WriteLine();
+
+            Handgun h1 = new Handgun("Desert Eagle", 6.75m, 7);
+            h1.silencer = "No";
+            Console.WriteLine($"New Handgun with the name {h1.Name}. Silencer availablle:  {h1.silencer}");
+            Console.WriteLine();
+
+            IWeapon[] guns = new IWeapon[4];
+            guns[0] = w1;
+            guns[1] = w2;
+            guns[2] = w3;
+            guns[3] = h1;
+
+            foreach (var gun in guns)
+            {
+                Console.WriteLine(gun.Name);
+                
+            }
+            Console.WriteLine($"The ClipSize of {h1.Name} has been updated to {h1.UpdateClipsize(12)}");
+            foreach (var gun in guns)
+            {
+                Console.WriteLine(gun);
+            }
 
         }
     }
