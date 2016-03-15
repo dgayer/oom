@@ -35,10 +35,7 @@ namespace Task2
             guns[1] = w2;
             guns[2] = w3;
             guns[3] = h1;
-<<<<<<< HEAD
-            
-=======
->>>>>>> e36110df4e22cdbbcdee22bf6caa9822411ff5e5
+
 
             foreach (var gun in guns)
             {
@@ -50,12 +47,11 @@ namespace Task2
             {
                 Console.WriteLine(gun);
             }
-<<<<<<< HEAD
+
 
             var settings = new JsonSerializerSettings() { Formatting = Formatting.Indented, TypeNameHandling = TypeNameHandling.Auto };
             Console.WriteLine(JsonConvert.SerializeObject(guns, settings));
-=======
->>>>>>> e36110df4e22cdbbcdee22bf6caa9822411ff5e5
+
 
             var text = JsonConvert.SerializeObject(guns, settings);
             var desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
