@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.IO;
+using System.Reactive.Linq;
+using System.Reactive.Subjects;
 
 
 namespace Task2
@@ -19,6 +21,7 @@ namespace Task2
             Weapon w3 = new Weapon("AK-47", 6.40m);
 
             Console.WriteLine($"Weapon 1 Caliber: {w1.Caliber}");
+            Console.WriteLine(w1);
             Console.WriteLine($"Weapon 2 Name: {w2.Name}");
             w2.Name = "Five-Seven";
             Console.WriteLine($"Weapon 2 Name: {w2.Name}");
@@ -35,6 +38,11 @@ namespace Task2
             guns[1] = w2;
             guns[2] = w3;
             guns[3] = h1;
+
+            Weapon[] newarray = new Weapon[2];
+            newarray[0] = w1;
+
+
 
 
             foreach (var gun in guns)
